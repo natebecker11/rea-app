@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MaterialImportsModule } from './material-imports/material-imports.module';
 import { DealsComponent } from './deals/deals.component';
+import { QrCodeComponent } from './qr-code/qr-code.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DealsComponent } from './deals/deals.component';
     LoginComponent,
     FooterComponent,
     HeaderComponent,
-    DealsComponent
+    DealsComponent,
+    QrCodeComponent
   ],
   imports: [
     BrowserModule,
