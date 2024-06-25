@@ -1,0 +1,49 @@
+<div class="flexColumn">
+    <div class="shrink primary center">
+        <img height="100" src="assets/applogo.png" alt="">
+    </div>
+    <div class="grow scrollY primary">
+        <ng-container *ngIf="IsLoaded">
+
+            <ng-container *ngFor="let deal of Deals">
+                <div class="p5">
+                    <mat-card style="max-width: 400px;" class="deal secondary" appearance="outlined">
+                        
+                        <img mat-card-image [src]="deal.imageUrl" [alt]="deal.name">
+                        <mat-card-header>
+                            <mat-card-title>{{deal.name}}</mat-card-title>
+                          </mat-card-header>
+                        <mat-card-content>
+                          <p>{{deal.desc}}
+                          </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                          
+                          <button mat-button class="accent white-text">See Deal</button>
+                        </mat-card-actions>
+                      </mat-card>
+
+                </div>
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="!IsLoaded">
+            
+                <div class="loadingIcon f16 center black-text">
+                    <div class="center p5">
+                        Loading Deals!!!
+        
+                    </div>
+                    <div class="p20">
+                        <i class="fa f60 fa-spin fa-spinner"></i>
+        
+                    </div>
+                    <div class="center p5">
+                        Please Wait!!!
+        
+                    </div>
+                </div>
+            
+        </ng-container>
+
+    </div>
+</div>
